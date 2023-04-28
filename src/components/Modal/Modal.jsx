@@ -4,14 +4,6 @@ import { Overlay, ModalSt } from './Modal.styled';
 import { useEffect } from 'react';
 
 export function Modal({ onGiveImg, onClose }) {
-  // componentDidMount() {
-  //   window.addEventListener('keydown', this.hendleKeyDown);
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('keydown', this.hendleKeyDown);
-  // }
-
   useEffect(() => {
     window.addEventListener('keydown', hendleKeyDown);
   }, []);
@@ -39,4 +31,5 @@ export function Modal({ onGiveImg, onClose }) {
 
 Modal.propTypes = {
   onGiveImg: PropTypes.object.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
