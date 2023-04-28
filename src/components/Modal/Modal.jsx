@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export function Modal({ onGiveImg, onClose }) {
   useEffect(() => {
     window.addEventListener('keydown', hendleKeyDown);
-  }, []);
+  });
 
   const handleBackdropClick = e => {
     if (e.currentTarget === e.target) {
